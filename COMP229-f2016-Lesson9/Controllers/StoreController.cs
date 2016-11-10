@@ -17,14 +17,8 @@ namespace COMP229_f2016_Lesson9.Controllers
         // GET: Store
         public ActionResult Index()
         {
-            List<Genre> genres = new List<Genre>
-            {
-                new Genre("Disco"),
-                new Genre("Jazz"),
-                new Genre("Electronic"),
-                new Genre("Rock")
-            };
-            return View(genres);
+
+            return View(db.Genres.ToList());
         }
 
         // GET: Store/Browse?genre=disco
